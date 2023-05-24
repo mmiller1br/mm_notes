@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "477fb5e420139801",
+        "id": "e167c97f4471f1ff",
         "type": "tabs",
         "children": [
           {
-            "id": "1319423bc5c3786a",
+            "id": "d2cf22573c3f97e2",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "README.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "README.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -146,13 +138,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1319423bc5c3786a",
+  "active": "d2cf22573c3f97e2",
   "lastOpenFiles": [
-    "KVM install on Ubuntu.md",
     "INFLUXDB.md",
     "README.md",
-    "2023-05-24.md",
     "Untitled.md",
+    "KVM install on Ubuntu.md",
+    "2023-05-24.md",
     "New Text Document.txt"
   ]
 }
