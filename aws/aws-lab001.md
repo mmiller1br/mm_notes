@@ -1,6 +1,7 @@
 
 ## Diagram:
-![](_assets/aws-lab001.png)
+![aws-lab001](https://github.com/mmiller1br/mm_notes/assets/32887571/ecf02458-1b79-4d55-b787-15d121c5d512)
+
 
 
 ## AWS CloudFormation stack
