@@ -1,5 +1,6 @@
 
 ## Diagram:
+
 ![](_assets/aws-lab001.png)
 
 
