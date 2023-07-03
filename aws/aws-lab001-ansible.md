@@ -1,6 +1,6 @@
 ## Diagram
 
-![](_assets/aws-lab001.png)
+![aws-lab001](https://github.com/mmiller1br/mm_notes/assets/32887571/ecf02458-1b79-4d55-b787-15d121c5d512)
 
 ## ANSIBLE playbook to create this LAB
 
@@ -308,3 +308,12 @@
         cidr_block: "{{ item.cidr_block }}"
       loop: "{{ vpc_info.vpcs }}"
 ```
+
+Command to run this playbooks:
+
+```
+ ansible@aut01:~$ ansible-playbook aws-lab01.yml
+
+ ansible@aut01:~$ ansible-playbook aws-lab01-del.yml
+```
+
