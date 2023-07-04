@@ -1,5 +1,18 @@
 
+This is a simple LAB on AWS (LAB001), but the idea is to demonstrate how to create it using Infrastructure as a Code (IaC) using 3 different approaches, or tools:
+- CloudFormation (from AWS)
+- Ansible
+- Terraform
+
+They don't have all the best practices when creating the code in terms of variables, structure, etc, but they have an excellent starting point to understand how they work and the similarities and differences.
+
+Enjoy and fell free to copy it, use it, and send your comments to make it better.
+
+Cheers.
+
+
 ## Diagram:
+
 ![aws-lab001](https://github.com/mmiller1br/mm_notes/assets/32887571/ecf02458-1b79-4d55-b787-15d121c5d512)
 
 
