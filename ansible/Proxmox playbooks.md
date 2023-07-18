@@ -45,6 +45,25 @@ myapi_host: 192.168.1.100
         state: absent
 ```
 
+- Ansible file to create a new Container using a pre-defined template - file name proxmox-ct.yml
+
+```yaml
+---
+- name: Proxmox Create a new Container from TEMPLATE
+  hosts: srv-proxmox
+  tasks:
+    - proxmox:
+        vmid: 210
+        node: homeserver
+        api_user: "{{ myapi_user }}"
+        api_password: "{{ myapi_password }}"
+        api_host: "{{ myapi_host }}"
+        clone: 299   # The VM source
+        hostname: ct-automated  # The target VM name
+        storage: local-lvm
+```
+
+
 - Commands to run your Ansible files:
 
 ```bash
