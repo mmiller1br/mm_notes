@@ -1,5 +1,7 @@
 
-In order to use Terraform to create VMs on your Proxmox instance, I've created 3 main files (.TF):
+## Terraform and Proxmox
+
+In order to use Terraform to create VMs on my Proxmox server, I've created 3 files (.TF):
 - vars.tf (contain variables to be used by other Terraform files)
 - provider.tf (contain details for Terraform to connect to the Proxmox provider)
 - main.tf (contain details about the resources to be created on Proxmox - in this case, details about the VM to be created)
