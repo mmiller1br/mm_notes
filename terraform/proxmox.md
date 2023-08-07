@@ -17,12 +17,20 @@ variable "pm_api_url" {
   default = "https://192.168.2.254:8006/api2/json"
 }
 
-variable "template_name" {
-  default = "ubuntu-22.04-template"
-}
-
 variable "proxmox_node" {
   default = "homeserver"
+}
+
+variable "pm_api_token_id" {
+  default = "terraform-prov@pve!terraform-tokenid"
+}
+
+variable "pm_api_token_secret" {
+  default = "ed4da349-1268-4242-b13d-043a053d201a"
+}
+
+variable "template_name" {
+  default = "ubuntu-22.04-template"
 }
 ```
 
@@ -41,9 +49,8 @@ terraform {
 
 provider "proxmox" {
   pm_api_url = var.pm_api_url
-  pm_api_token_id = "terraform-prov@pve!terraform-tokenid"
-  pm_api_token_secret = "ed4da349-1268-4242-b13d-043a053d201a"
-  #pm_otp = ""
+  pm_api_token_id = var.pm_api_token_id
+  pm_api_token_secret = var.pm_api_token_secret
   pm_tls_insecure = true
   pm_debug = true
 }
@@ -55,32 +62,33 @@ provider "proxmox" {
 ```
 resource "proxmox_vm_qemu" "my_tf_test" {
   count = 1
-  name  = "my-tf-test-vm"
+  name  = "my-tf-vm01"
   desc  = "Test VM created with Terraform"
+  vmid  = 111
 
   target_node = var.proxmox_node
-
   clone = var.template_name
+  full_clone = true
 
-  agent = 1
-  os_type = "cloud-init"
-  cores = 1
-  sockets = 1
-  cpu = "host"
-  memory = 2048
-  scsihw = "virtio-scsi-pci"
+  agent    = 1
+  os_type  = "cloud-init"
+  cores    = 1
+  sockets  = 1
+  cpu      = "host"
+  memory   = 2048
+  scsihw   = "virtio-scsi-pci"
   bootdisk = "scsi0"
 
   disk {
-    slot = 0
-    size = "25G"
-    type = "scsi"
-    storage = "local-lvm"
-    iothread = 1
+    slot     = 0
+    size     = "25G"
+    type     = "scsi"
+    storage  = "local-lvm"
+    iothread = 0
   }
 
   network {
-    model = "virtio"
+    model  = "virtio"
     bridge = "vmbr0"
   }
 
