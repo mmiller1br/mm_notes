@@ -18,7 +18,7 @@ services:
     container_name: datadog-agent
     restart: always
     environment:
-      - DD_API_KEY=3de5cf93e70fc8ff91f2629c25aeb47a
+      - DD_API_KEY=3de5cf93e70fc8ff91f2629c25123456
       - DD_SITE=datadoghq.com
       - DD_TAGS="machineID:srv-docker"
       - DD_APM_ENABLED=true
