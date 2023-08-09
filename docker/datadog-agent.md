@@ -1,4 +1,8 @@
 
+## Docker-compose for Datadog-agent
+
+#docker #docker-compose #datadog #container
+
 This is docker-compose file to create a docker container with the datadog-agent.
 
 In my homeLAB, I have a Ubuntu Server running in a VM on my PROXMOX with a bunch of docker containers. One of these containers is the datadog-agent that reads all the information from this server and send it all to the Cloud.
