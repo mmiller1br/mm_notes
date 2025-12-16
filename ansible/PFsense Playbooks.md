@@ -1,4 +1,4 @@
-playbooks hre in this document:
+playbooks here in this document:
 1. read the WAN interface IP from a PFSense and save it to an external file
 2. read IPSec tunnel info from a PFSense and save it to an external file
 3. create IPSec tunnel config (tunnel1 and tunnel2, with phases1 and 2)
